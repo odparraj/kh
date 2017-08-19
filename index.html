@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>KNOW HOW</title>
@@ -10,8 +10,9 @@
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/animate.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-  </head>
-  <body ng-app="app" ng-controller="appCtrl">
+</head>
+
+<body ng-app="app" ng-controller="appCtrl">
     <!--header-->
 
     <header class="main-header" id="header">
@@ -37,7 +38,7 @@
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{lang}} <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
                                         <li><a ng-click="lang=='es'?lang='en':lang='es'">{{ lang == 'es' ? 'En' : 'Es' }}</a></li>
-                                  </ul>
+                                    </ul>
                                 </li>
                             </ul>
                         </div>
@@ -95,68 +96,56 @@
     <section id="servicios" class="section-padding">
         <div class="container">
             <div class="row">
-                <div class="col-md-2 wow fadeInLeft delay-05s">
+                <div class="col-md-12 wow fadeInLeft delay-05s text-center">
                     <div class="section-title">
-                        <h2 class="head-title">SERVICIOS</h2>
-                        <hr class="botm-line">
-                        
+                        <h2 class="head-title">{{ translate[lang]['txt_services'] | uppercase }}</h2>
+                        <!--<hr class="botm-line">-->
                     </div>
                 </div>
-                <div class="col-md-10">
-                   
-                    <div class="col-md-6 wow fadeInRight delay-02s">
+                <div class="col-md-12">
+                    
+                    <div class="col-md-12 wow fadeInRight delay-02s">                               
                         <div class="icon">
                             <i class="fa fa-cogs"></i>
                         </div>
                         <div class="icon-text">
-                            <h3 class="txt-tl"> CONSULTORÍA DE GESTIÓN:</h3>
-                           
+                            <h3 class="txt-tl"> {{ translate[lang]['txt_management_consulting'] | uppercase}}:</h3>
+                            <div class="row">                                    
+                                <div class="col-md-4">
+                                    <h3 class="txt-tl"> {{ translate[lang]['txt_process_improvement'] }}:</h3>
+                                    <ul class="list-unstyled servicios" ng-repeat="item in translate[lang]['array_process_improvement']">
+                                        <li class="servicios">{{item}}</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <h3 class="txt-tl"> {{ translate[lang]['txt_human_management'] }}:</h3>
+                                    <ul class="list-unstyled servicios" ng-repeat="item in translate[lang]['array_human_management']">
+                                        <li class="servicios">{{item}}</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4 ">
+                                    <h3 class="txt-tl"> {{ translate[lang]['txt_management_systems'] }}:</h3>
+                                    <ul class="list-unstyled servicios" ng-repeat="item in translate[lang]['array_management_systems']">
+                                        <li class="servicios">{{item}}</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-        
-                        <div class="icon-text">
-                            <h3 class="txt-tl">Mejora de procesos</h3>
-                            <li class="servicios"><i class="fa fa-check" aria-hidden="true"></i>Diagnóstico o evaluación de Satisfacción del cliente.</li>
-                            <li class="servicios"><i class="fa fa-check" aria-hidden="true"></i>Análisis y optimización de procesos.</li>
-                            <li class="servicios"><i class="fa fa-check" aria-hidden="true"></i>Lean Production</li>
-                            <li class="servicios"><i class="fa fa-check" aria-hidden="true"></i>6 Sigma</li>
-                            <li class="servicios"><i class="fa fa-check" aria-hidden="true"></i>AMFE - Análisis Modal de Fallos y Efectos.</li>
-                            <li class="servicios"><i class="fa fa-check" aria-hidden="true"></i>Gestión de datos e indicadores.</li>
-                        </div>
-                         <div class="icon-text">
-                            <h3 class="txt-tl"> Gestión Humana:</h3>
-                            <li class="servicios"><i class="fa fa-check" aria-hidden="true"></i> Evaluación del clima, microclima y cultura organizacional.</li>
-                            <li class="servicios"><i class="fa fa-check" aria-hidden="true"></i> Coaching empresarial</li>
-                            <li class="servicios"><i class="fa fa-check" aria-hidden="true"></i> Coaching organizacional</li>
-                            <li class="servicios"><i class="fa fa-check" aria-hidden="true"></i> Desarrollo de Equipos de Alto Rendimiento.</li>
-                            <li class="servicios"><i class="fa fa-check" aria-hidden="true"></i> Diseño de modelos para medir competencias funcionales y comportamentales.</li>
-                            <li class="servicios"><i class="fa fa-check" aria-hidden="true"></i> Planes de intervención de Clima y Cultura Organizacional.</li>
-                        </div>
-                         <div class="icon-text">
-                            <h3 class="txt-tl">Sistemas de Gestión:</h3>
-                            <li class="servicios"><i class="fa fa-check" aria-hidden="true"></i> Implementación ISO 9001 - Gestión de la Calidad.</li>
-                            <li class="servicios"><i class="fa fa-check" aria-hidden="true"></i> Implementación ISO 22000 - Gestión de la Calidad en Empresas Alimentarias.</li>
-                            <li class="servicios"><i class="fa fa-check" aria-hidden="true"></i> Implementación ISO 17025 - Gestión de la calidad en Laboratorios.</li>
-                            <li class="servicios"><i class="fa fa-check" aria-hidden="true"></i> Implementación ISO 27001 - Gestión de la seguridad de la información.</li>
-                            <li class="servicios"><i class="fa fa-check" aria-hidden="true"></i> Implementación ISO 14001 - Gestión Medioambiental.</li>
-                            <li class="servicios"><i class="fa fa-check" aria-hidden="true"></i> Implementación SA 8000 - Responsabilidad Social Corporativa.</li>
-                            <li class="servicios"><i class="fa fa-check" aria-hidden="true"></i> Implementación OHSAS 18001 - Gestión de la Prevención.</li>
-                            <li class="servicios"><i class="fa fa-check" aria-hidden="true"></i> Elaboración de Reportes de Sostenibilidad bajo Metodología GRI Standards.</li>
-                        </div>
-                    </div>
-                     <div class="col-md-6 wow fadeInRight delay-02s">
+                    </div>                        
+                    
+                    <div class="col-md-12 wow fadeInRight delay-02s">
                         <div class="icon">
-                            <i class="fa fa-paint-brush"></i>
+                            <i class="fa fa-bar-chart"></i>
                         </div>
                         <div class="icon-text">
-                            <h3 class="txt-tl">CONSULTORÍA ECONÓMICA:</h3>
-                            <li class="servicios"><i class="fa fa-check" aria-hidden="true"></i>Estudios de factibilidad</li>
-                            <li class="servicios"><i class="fa fa-check" aria-hidden="true"></i>Planes de negocio</li>
-                            <li class="servicios"><i class="fa fa-check" aria-hidden="true"></i>Investigación de mercados nacionales e internacionales.</li>
-                            <li class="servicios"><i class="fa fa-check" aria-hidden="true"></i>Análisis de impactos</li>
-                            <li class="servicios"><i class="fa fa-check" aria-hidden="true"></i>Diagnóstico DAFO y BENCHMARKING.</li>
-                            <li class="servicios"><i class="fa fa-check" aria-hidden="true"></i>Despliegue estratégico: Cuadro de Mando Integral (CMI)</li>
-                            <li class="servicios"><i class="fa fa-check" aria-hidden="true"></i><span class="icono-lista"></span>Diseño de la planeación estratégica.</li>
-                            <li class="servicios"><i class="fa fa-check" aria-hidden="true"></i>Estudio de oferta y demanda para el ajuste de tarifas para el sector transporte y servicios públicos.</li>
+                            <h3 class="txt-tl">{{ translate[lang]['txt_economic_and_business_consulting'] | uppercase}}:</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="list-unstyled servicios" ng-repeat="item in translate[lang]['array_economic_and_business_consulting']">
+                                        <li class="servicios">{{item}}</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -164,7 +153,7 @@
         </div>
     </section>
     <!---->
-    <h2 class="head-title text-center" id="clientes">NUESTROS CLIENTES</h2>
+    <h2 class="head-title text-center" id="clientes">{{ translate[lang]['txt_our_clients'] | uppercase }}</h2>
     <section class="section-padding parallax bg-image-2 section wow fadeIn delay-08s" id="cta-2">
         <div class="container">
             <div class="row">
@@ -272,21 +261,21 @@
                         <div class="contact-info">
                             <form action="" method="post" role="form" class="contactForm">
                                 <div class="form-group">
-                                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="{{translate[lang]['form_txt_name']}}" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                                     <div class="validation"></div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                                    <div class="validation"></div>
-                                </div>
-                                
-                                <div class="form-group">
-                                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="{{translate[lang]['form_txt_email']}}" data-rule="email" data-msg="Please enter a valid email" />
                                     <div class="validation"></div>
                                 </div>
                                 
                                 <div class="form-group">
-                                    <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                                    <input type="text" class="form-control" name="subject" id="subject" placeholder="{{translate[lang]['form_txt_subject']}}" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                    <div class="validation"></div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <textarea class="form-control vertical" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="{{translate[lang]['form_txt_message']}}"></textarea>
                                     <div class="validation"></div>
                                 </div>
                                 <button type="submit" class="btn btn-send">Send</button>
@@ -297,7 +286,7 @@
                     <div class="col-md-4 col-sm-6">
                         <h3 class="cont-title">Visit Us</h3>
                         <div class="location-info">
-                            <p class="white"><span aria-hidden="true" class="fa fa-map-marker"></span>Via Principe Amedeo 9, Torino, Italy</p>
+                            <p class="white"><span aria-hidden="true" class="fa fa-map-marker"></span>Bogotá, Colombia</p>
                             <p class="white"><span aria-hidden="true" class="fa fa-phone"></span>Phone: 0039 333 12 68 347</p>
                             <p class="white"><span aria-hidden="true" class="fa fa-envelope"></span>Email: <a href="" class="link-dec">hi@yourdomain.com</a></p>
                         </div>
@@ -317,15 +306,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-7 footer-copyright">
-                    © Bethany Theme - All rights reserved
-                    <div class="credits">
-                        <!-- 
-                            All the links in the footer should remain intact. 
-                            You can delete the links only if you purchased the pro version.
-                            Licensing information: https://bootstrapmade.com/license/
-                            Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Bethany
-                        -->
-                        Designed by <a href="https://bootstrapmade.com/">Bootstrap Themes</a>
+                    © Know How Asesores <a href="#">{{ date | date:'yyyy' }}</a>
                     </div>
                 </div>
 
@@ -342,5 +323,5 @@
     <script src="js/angular.min.js"></script>
     <script src="js/angularApp.js"></script>
     
-  </body>
+</body>
 </html>

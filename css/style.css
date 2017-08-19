@@ -220,7 +220,7 @@ p
     padding: 0px 25px 0px 0px;
 }
 h3.txt-tl {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1.35;
     margin-bottom: 18px;
 }
@@ -460,7 +460,7 @@ i.fa.fa-check {
 }
 li.servicios {
     font-size: 12px;
-    list-style: none;
+    /*list-style: none;*/
     margin: 4px 0; 
 }
 img.logo.img-responsive {
@@ -491,3 +491,25 @@ img.logo.img-responsive {
 }
 
 
+span.servicios{
+    font-size: 12px;
+}
+
+ul.servicios li:before
+{
+    /*Using a Bootstrap glyphicon as the bullet point*/
+    content: "\e013";
+    font-family: 'Glyphicons Halflings';
+    font-size: 10px;
+    float: left;
+    margin-top: 4px;
+    margin-left: -17px;
+    color: #D29C00;
+}
+ul.servicios{
+    padding-left: 17px;
+}
+
+textarea.vertical{
+    resize: vertical;
+}
