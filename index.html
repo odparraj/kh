@@ -11,8 +11,9 @@
     <link rel="stylesheet" type="text/css" href="css/animate.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
-  <body>
+  <body ng-app="app" ng-controller="appCtrl">
     <!--header-->
+
     <header class="main-header" id="header">
         <div class="bg-color">
             <!--nav-->
@@ -27,19 +28,23 @@
                         </div>
                         <div class="collapse navbar-collapse navbar-right" id="mynavbar">
                             <ul class="nav navbar-nav">
-
-                                <li class="active"><a href="#header">INICIO</a></li>
-                                <li><a href="#quienes">QUIENES SOMOS</a></li>
-                                <li><a href="#servicios">SERVICIOS</a></li>
-                                <li><a href="#clientes">CLIENTES</a></li>
-                                <li><a href="#contact">CONTACTO</a></li>
-
+                                <li class="active"><a href="#header">{{ translate[lang]['txt_home'] }}</a></li>
+                                <li><a href="#quienes">{{ translate[lang]['txt_about'] }}</a></li>
+                                <li><a href="#servicios">{{ translate[lang]['txt_services'] }}</a></li>
+                                <li><a href="#clientes">{{ translate[lang]['txt_clients'] }}</a></li>
+                                <li><a href="#contact">{{ translate[lang]['txt_contact'] }}</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{lang}} <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a ng-click="lang=='es'?lang='en':lang='es'">{{ lang == 'es' ? 'En' : 'Es' }}</a></li>
+                                  </ul>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </nav>
-           º<div class="footer-social">
+            <div class="footer-social">
 		        <div class="pull-right hidden-xs hidden-sm">
 					<a href="#"><i class="fa fa-twitter"></i></a>
 					<a href="#"><i class="fa fa-google-plus"></i></a>
@@ -62,28 +67,27 @@
     	<div class="container">
 	    	<div class="row quienes">
 	    		<div class="col-md-12 wow fadeInLeft delay-05s">
-	    			<h2 class="head-title text-center">QUIENES SOMOS</h2>
+	    			<h2 class="head-title text-center">{{ translate[lang]['txt_about'] | uppercase }}</h2>
 	    			<p class="sec-para text-justify">
-		    			"Know How Asesores nace de la necesidad de fortalecer el desarrollo de organizaciones privadas y públicas  a través de asesorías ligadas a un adecuado acompañamiento durante la implementación de las estrategias diseñadas.
-						Esta iniciativa se sustenta además al observar la evidente insostenibilidad y difícil crecimiento de las mipymes en Colombia, las cuales en su mayoría, llegan a ser liquidadas y/o abandonadas al cumplir en promedio los dos años de existencia. Esto a pesar que nuestro país, ha logrado ubicarse en las primeras posiciones en materia de creación de empresas a nivel de América Latina durante los últimos años."
+		    			" {{ translate[lang]['txt_about_content'] }} "
 					</p>
 	    		</div>	
 	    	</div>
 	    	<div class="row">
 	    		<div class="col-md-4">
-	    			<h3 class="txt-tl text-center"><i class="fa fa-flag" aria-hidden="true"></i>MISIÓN</h3>
+	    			<h3 class="txt-tl text-center"><i class="fa fa-flag" aria-hidden="true"></i>{{ translate[lang]['txt_mission'] | uppercase }}</h3>
 	    			
 	    		</div>
 		    	<div class="col-md-8 mision wow fadeInRight delay-03s">
-                     <p class="txt-para text-justify">"Nos mueve ser parte del fortalecimiento y crecimiento de las entidades públicas y privadas, y más aún del desarrollo de la fuerza emprendedora,  lo cual se traduce en un fundamento clave para el progreso sostenible de la sociedad actual". </p>
+                     <p class="txt-para text-justify">" {{ translate[lang]['txt_mission_content'] }} " </p>
 	    		</div>	    		
 	    	</div>
 	    	<div class="row" style="margin-top: 30px; margin-bottom: 30px;">
 	    		<div class="col-md-4 col-md-push-8">
-	    			<h3 class="txt-tl text-center "><i class="fa fa-line-chart" aria-hidden="true"></i>VISIÓN</h3>
+	    			<h3 class="txt-tl text-center "><i class="fa fa-line-chart" aria-hidden="true"></i>{{ translate[lang]['txt_vision'] | uppercase }}</h3>
 	    		</div>
-	    		<div class="col-md-8 col-md-pull-4 vision wow fadeInRight delay-03s">
-	    			<p class="txt-para text-justify">"A 2020 seremos empresa líder a nivel nacional, reconocida por su excelente contribución al desarrollo, fortalecimiento y crecimiento de las organizaciones, fundamentada en un capital humano competente y brindando servicios con los más altos estándares de calidad. Así mismo, y además del mercado norteamericano, cubriremos importantes consultorías en el resto de América Latina"</p>
+	    		<div class="col-md-8 col-md-pull-4 vision wow fadeInLeft delay-03s">
+	    			<p class="txt-para text-justify">" {{ translate[lang]['txt_vision_content'] }} "</p>
 	    		</div>
 	    	</div>
     	</div>
@@ -133,7 +137,7 @@
                             <li class="servicios"><i class="fa fa-check" aria-hidden="true"></i> Implementación ISO 22000 - Gestión de la Calidad en Empresas Alimentarias.</li>
                             <li class="servicios"><i class="fa fa-check" aria-hidden="true"></i> Implementación ISO 17025 - Gestión de la calidad en Laboratorios.</li>
                             <li class="servicios"><i class="fa fa-check" aria-hidden="true"></i> Implementación ISO 27001 - Gestión de la seguridad de la información.</li>
-                            <li class="servicios"><i class="fa fa-check" aria-hidden="true"></i>Implementación ISO 14001 - Gestión Medioambiental.</li>
+                            <li class="servicios"><i class="fa fa-check" aria-hidden="true"></i> Implementación ISO 14001 - Gestión Medioambiental.</li>
                             <li class="servicios"><i class="fa fa-check" aria-hidden="true"></i> Implementación SA 8000 - Responsabilidad Social Corporativa.</li>
                             <li class="servicios"><i class="fa fa-check" aria-hidden="true"></i> Implementación OHSAS 18001 - Gestión de la Prevención.</li>
                             <li class="servicios"><i class="fa fa-check" aria-hidden="true"></i> Elaboración de Reportes de Sostenibilidad bajo Metodología GRI Standards.</li>
@@ -335,7 +339,8 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/wow.js"></script>
     <script src="js/custom.js"></script>
-    <script src="contactform/contactform.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angularApp.js"></script>
     
   </body>
 </html>
