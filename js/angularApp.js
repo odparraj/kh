@@ -13,6 +13,8 @@ app.controller("appCtrl", function($scope) {
     		txt_clients: 'Clientes',
             txt_our_clients: 'Nuestros clientes',
     		txt_contact: 'Contacto',
+            txt_alliances: 'Alianzas',
+            txt_strategic_alliances: 'Alianzas',
 
     		txt_about_content: 'Know How Asesores nace de la necesidad de fortalecer el desarrollo de organizaciones privadas y públicas  a través de asesorías ligadas a un adecuado acompañamiento durante la implementación de las estrategias diseñadas. Esta iniciativa se sustenta además al observar la evidente insostenibilidad y difícil crecimiento de las mipymes en Colombia, las cuales en su mayoría, llegan a ser liquidadas y/o abandonadas al cumplir en promedio los dos años de existencia. Esto a pesar que nuestro país, ha logrado ubicarse en las primeras posiciones en materia de creación de empresas a nivel de América Latina durante los últimos años.',
 
@@ -82,6 +84,8 @@ app.controller("appCtrl", function($scope) {
     		txt_clients: 'Customers',
             txt_our_clients: 'Our clients',
     		txt_contact: 'Contact',
+            txt_alliances: 'Alliances',
+            txt_strategic_alliances: 'Strategic Alliances',
 
     		txt_about_content: 'Know How Advisors arises from the need to strengthen the development of private and public organizations through advisory services linked to an adequate accompaniment during the implementation of the strategies designed. This initiative is also sustained by observing the evident unsustainability and difficult growth of microenterprises in Colombia, which are mostly liquidated and / or abandoned on average in the two years of existence. This in spite of our country, has managed to position itself in the top positions in business creation in Latin America in recent years.',
 

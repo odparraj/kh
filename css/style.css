@@ -35,6 +35,7 @@ h1, h2, h3, h4, h5, h6
 {
 	background: url(../img/test.jpeg) no-repeat;
 	background-size: cover;
+    background-position: 50% 50%; 
 	min-height: 610px;
 }
 .bg-color

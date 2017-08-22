@@ -9,17 +9,27 @@
     
     // Navigation scrolls
     $('.navbar-nav li a').bind('click', function(event) {
+
+       /* $('.button-bar').toggleClass('collapsed');
+        $('#mynavbar').toggleClass('in');*/
+
         $('.navbar-nav li').removeClass('active');
         $(this).closest('li').addClass('active');
         var $anchor = $(this);
         var nav = $($anchor.attr('href'));
         if (nav.length) {
         $('html, body').stop().animate({				
-            scrollTop: $($anchor.attr('href')).offset().top				
+            scrollTop: $($anchor.attr('href')).offset().top-60				
         }, 1500, 'easeInOutExpo');
         
         event.preventDefault();
         }
+    });
+
+    $('.nav-clickable').on('click', function(event) {
+
+        $('.button-bar').toggleClass('collapsed');
+        $('#mynavbar').toggleClass('in');
     });
     
     

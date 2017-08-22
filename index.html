@@ -22,22 +22,35 @@
                 <div class="container">
                     <div class="col-md-12">
                         <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynavbar" aria-expanded="false" aria-controls="navbar">
-                            <span class="fa fa-bars"></span>
-                        </button>
+                            <button id="button-bar" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynavbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="fa fa-bars"></span>
+                            </button>
                             <a href="index.html" class="navbar-brand"><img src="img/logo-peque.png" alt="" class="logo" class="img-responsive"></a>
                         </div>
                         <div class="collapse navbar-collapse navbar-right" id="mynavbar">
                             <ul class="nav navbar-nav">
-                                <li class="active"><a href="#header">{{ translate[lang]['txt_home'] }}</a></li>
-                                <li><a href="#quienes">{{ translate[lang]['txt_about'] }}</a></li>
-                                <li><a href="#servicios">{{ translate[lang]['txt_services'] }}</a></li>
-                                <li><a href="#clientes">{{ translate[lang]['txt_clients'] }}</a></li>
-                                <li><a href="#contact">{{ translate[lang]['txt_contact'] }}</a></li>
+                                <!-- <li class="active">
+                                    <a class="nav-clickable" href="#header">{{ translate[lang]['txt_home'] }}</a>
+                                </li> -->
+                                <li>
+                                    <a class="nav-clickable" href="#quienes">{{ translate[lang]['txt_about'] }}</a>
+                                </li>
+                                <li>
+                                    <a class="nav-clickable" href="#servicios">{{ translate[lang]['txt_services'] }}</a>
+                                </li>
+                                <li>
+                                    <a class="nav-clickable" href="#clientes">{{ translate[lang]['txt_clients'] }}</a>
+                                </li>
+                                <li>
+                                    <a class="nav-clickable" href="#alliances">{{ translate[lang]['txt_alliances'] }}</a>
+                                </li>
+                                <li>
+                                    <a class="nav-clickable" href="#contact">{{ translate[lang]['txt_contact'] }}</a>
+                                </li>
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{lang}} <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
-                                        <li><a ng-click="lang=='es'?lang='en':lang='es'">{{ lang == 'es' ? 'En' : 'Es' }}</a></li>
+                                        <li><a class="nav-clickable" ng-click="lang=='es'?lang='en':lang='es'">{{ lang == 'es' ? 'En' : 'Es' }}</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -47,14 +60,14 @@
             </nav>
             <div class="footer-social">
 		        <div class="pull-right hidden-xs hidden-sm">
-					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="https://twitter.com/knowhowcol" target="_blanck"><i class="fa fa-twitter"></i></a>
 					<a href="#"><i class="fa fa-google-plus"></i></a>
 				</div>
 			</div>
             <!--/ nav-->
             <div class="container text-center">
                 <div class="wrapper wow fadeInUp delay-05s" >
-					<img src="img/logo_es.png" class="logo img-responsive">
+					<img src="img/logo_{{lang}}.png" class="logo img-responsive">
                 </div>
             </div>
         </div>
@@ -153,17 +166,18 @@
         </div>
     </section>
     <!---->
-    <h2 class="head-title text-center" id="clientes">{{ translate[lang]['txt_our_clients'] | uppercase }}</h2>
+    
+    <h2 style="padding-top: 75px;" class="head-title text-center wow fadeInUp delay-05s animated" id="clientes">{{ translate[lang]['txt_our_clients'] | uppercase }}</h2>
     <section class="section-padding parallax bg-image-2 section wow fadeIn delay-08s" id="cta-2" style="padding: 10px 0">
         <div class="container">
             <div class="row">
 				<div id="myCarousel" class="carousel slide" data-ride="carousel">
 					  
 					<div class="carousel-inner">
-					    <div class="item text-center {{image=='01'?'active':''}}" ng-repeat="image in ['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20']">
+					    <div class="item text-center {{image=='01'?'active':''}}" ng-repeat="image in ['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19']">
                             <div class="center-block" style="background-color: #FAC900; transform: rotate(-7deg); width: 300px; height:200px; margin: 40px auto;">                                
                                 <div style="background-color: white; height: 200px; width: 300px; transform: rotate(7deg);" >                                    
-                                    <img style=" padding: 5px; height: 200px; " src="{{'img/logos_500x500/logos-'+image+'.png'}}" class="center-block" alt="{{image}}">
+                                    <img style=" padding: 5px; height: 200px; " src="{{'img/logos/logos-'+image+'.png'}}" class="center-block" alt="{{image}}">
                                 </div>
                             </div>
                         </div>
@@ -184,23 +198,23 @@
     </section>
     <!---->
     <!---->
-    <section class="section-padding wow fadeInUp delay-02s" id="portfolio">
+    <section class="section-padding wow fadeInUp delay-02s" id="alliances">
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-12">
                     <div class="section-title">
-                        <h2 class="head-title">Portfolio</h2>
+                        <h2 class="head-title">{{translate[lang]['txt_strategic_alliances'] | uppercase}}</h2>
                         <hr class="botm-line">
                         <p class="sec-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</p>
                     </div>
                 </div>
                 <div class="col-md-9 col-sm-12">
-                    <div class="col-md-4 col-sm-6 padding-right-zero">
+                    <div class="col-md-4 col-md-offset-3 col-sm-6 padding-right-zero">
                         <div class="portfolio-box design">
-                            <img src="img/port01.jpg" alt="" class="img-responsive">
+                            <img src="img/alianzas/alianzas-01.png" style="cursor: pointer;" class="img-responsive" onclick="window.open('http://www.afan.mx/', '_blanck')">
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-6 padding-right-zero">
+                    <!-- <div class="col-md-4 col-sm-6 padding-right-zero">
                         <div class="portfolio-box design">
                             <img src="img/port02.jpg" alt="" class="img-responsive">
                         </div>
@@ -224,7 +238,7 @@
                         <div class="portfolio-box design">
                             <img src="img/port06.jpg" alt="" class="img-responsive">
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -249,23 +263,6 @@
                         <h3 class="cont-title" style="padding: 0 15px;">Contact Us</h3>
                     </a>
                 </li>
-                <li>
-                    <a data-toggle="tab" href="#menu2">
-                        <h3 class="cont-title" style="padding: 0 15px;">Contact Us</h3>
-                    </a>
-                </li>
-                <li>
-                    <a data-toggle="tab" href="#menu3">
-                        <h3 class="cont-title" style="padding: 0 15px;">Contact Us</h3>
-                    </a>
-                </li>
-                <!-- <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
-                <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
-                <li><a data-toggle="tab" href="#menu3">Menu 3</a></li> -->
-                <!-- <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
-                <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
-                <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
-                <li><a data-toggle="tab" href="#menu3">Menu 3</a></li> -->
             </ul>
 
             <div class="tab-content">
@@ -312,7 +309,7 @@
                                 <h3 class="cont-title">Visit Us</h3>
                                 <div class="location-info">
                                     <p class="white"><span aria-hidden="true" class="fa fa-map-marker"></span>Bogotá, Colombia</p>
-                                    <p class="white"><span aria-hidden="true" class="fa fa-phone"></span>Phone: 0039 333 12 68 347</p>
+                                    <p class="white"><span aria-hidden="true" class="fa fa-phone"></span>Phone: Phone: (57-1) 4935028</p>
                                     <p class="white"><span aria-hidden="true" class="fa fa-envelope"></span>Email: <a href="" class="link-dec">hi@yourdomain.com</a></p>
                                 </div>
                             </div>
@@ -367,7 +364,7 @@
                                 <h3 class="cont-title">Visit Us</h3>
                                 <div class="location-info">
                                     <p class="white"><span aria-hidden="true" class="fa fa-map-marker"></span>Bogotá, Colombia</p>
-                                    <p class="white"><span aria-hidden="true" class="fa fa-phone"></span>Phone: 0039 333 12 68 347</p>
+                                    <p class="white"><span aria-hidden="true" class="fa fa-phone"></span>Phone: Phone: (57-1) 4935028</p>
                                     <p class="white"><span aria-hidden="true" class="fa fa-envelope"></span>Email: <a href="" class="link-dec">hi@yourdomain.com</a></p>
                                 </div>
                             </div>
@@ -378,118 +375,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div id="menu2" class="tab-pane fade">
-                    <div class="row white">
-                        <div class="col-md-8 col-sm-12">
-                            <div class="section-title">
-                                <h2 class="head-title black">Contact Us</h2>
-                                <hr class="botm-line">
-                                <p class="sec-para black">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</p>
-                            </div>
-                        </div>
-                        <div class="col-md-12 col-sm-12">
-                            <div class="col-md-4 col-sm-6" style="padding-left:0px;">
-                                <h3 class="cont-title">Email Us</h3>
-                                <div id="sendmessage">Your message has been sent. Thank you!</div>
-                                <div id="errormessage"></div>
-                                <div class="contact-info">
-                                    <form action="" method="post" role="form" class="contactForm">
-                                        <div class="form-group">
-                                            <input type="text" name="name" class="form-control" id="name" placeholder="{{translate[lang]['form_txt_name']}}" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                                            <div class="validation"></div>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" name="email" id="email" placeholder="{{translate[lang]['form_txt_email']}}" data-rule="email" data-msg="Please enter a valid email" />
-                                            <div class="validation"></div>
-                                        </div>
-                                        
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" name="subject" id="subject" placeholder="{{translate[lang]['form_txt_subject']}}" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                                            <div class="validation"></div>
-                                        </div>
-                                        
-                                        <div class="form-group">
-                                            <textarea class="form-control vertical" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="{{translate[lang]['form_txt_message']}}"></textarea>
-                                            <div class="validation"></div>
-                                        </div>
-                                        <button type="submit" class="btn btn-send">Send</button>
-                                    </form>
-                                </div>
-                                
-                            </div>
-                            <div class="col-md-4 col-sm-6">
-                                <h3 class="cont-title">Visit Us</h3>
-                                <div class="location-info">
-                                    <p class="white"><span aria-hidden="true" class="fa fa-map-marker"></span>Bogotá, Colombia</p>
-                                    <p class="white"><span aria-hidden="true" class="fa fa-phone"></span>Phone: 0039 333 12 68 347</p>
-                                    <p class="white"><span aria-hidden="true" class="fa fa-envelope"></span>Email: <a href="" class="link-dec">hi@yourdomain.com</a></p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="contact-icon-container hidden-md hidden-sm hidden-xs">
-                                    <span aria-hidden="true" class="fa fa-envelope-o"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="menu3" class="tab-pane fade">
-                    <div class="row white">
-                        <div class="col-md-8 col-sm-12">
-                            <div class="section-title">
-                                <h2 class="head-title black">Contact Us</h2>
-                                <hr class="botm-line">
-                                <p class="sec-para black">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</p>
-                            </div>
-                        </div>
-                        <div class="col-md-12 col-sm-12">
-                            <div class="col-md-4 col-sm-6" style="padding-left:0px;">
-                                <h3 class="cont-title">Email Us</h3>
-                                <div id="sendmessage">Your message has been sent. Thank you!</div>
-                                <div id="errormessage"></div>
-                                <div class="contact-info">
-                                    <form action="" method="post" role="form" class="contactForm">
-                                        <div class="form-group">
-                                            <input type="text" name="name" class="form-control" id="name" placeholder="{{translate[lang]['form_txt_name']}}" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                                            <div class="validation"></div>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" name="email" id="email" placeholder="{{translate[lang]['form_txt_email']}}" data-rule="email" data-msg="Please enter a valid email" />
-                                            <div class="validation"></div>
-                                        </div>
-                                        
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" name="subject" id="subject" placeholder="{{translate[lang]['form_txt_subject']}}" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                                            <div class="validation"></div>
-                                        </div>
-                                        
-                                        <div class="form-group">
-                                            <textarea class="form-control vertical" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="{{translate[lang]['form_txt_message']}}"></textarea>
-                                            <div class="validation"></div>
-                                        </div>
-                                        <button type="submit" class="btn btn-send">Send</button>
-                                    </form>
-                                </div>
-                                
-                            </div>
-                            <div class="col-md-4 col-sm-6">
-                                <h3 class="cont-title">Visit Us</h3>
-                                <div class="location-info">
-                                    <p class="white"><span aria-hidden="true" class="fa fa-map-marker"></span>Bogotá, Colombia</p>
-                                    <p class="white"><span aria-hidden="true" class="fa fa-phone"></span>Phone: 0039 333 12 68 347</p>
-                                    <p class="white"><span aria-hidden="true" class="fa fa-envelope"></span>Email: <a href="" class="link-dec">hi@yourdomain.com</a></p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="contact-icon-container hidden-md hidden-sm hidden-xs">
-                                    <span aria-hidden="true" class="fa fa-envelope-o"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <h3>Menu 3</h3>
-                    <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p> -->
                 </div>
             </div>
         </div>
@@ -502,7 +387,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-7 footer-copyright">
-                    © Know How Asesores <a href="#">{{ date | date:'yyyy' }}</a>
+                    © Know How Asesores <a>{{ date | date:'yyyy' }}</a>
                     </div>
                 </div>
 
