@@ -14,7 +14,7 @@ app.controller("appCtrl", function($scope) {
             txt_our_clients: 'Nuestros clientes',
     		txt_contact: 'Contacto',
             txt_alliances: 'Alianzas',
-            txt_strategic_alliances: 'Alianzas',
+            txt_strategic_alliances: 'Alianzas estratégicas',
 
     		txt_about_content: 'Know How Asesores nace de la necesidad de fortalecer el desarrollo de organizaciones privadas y públicas  a través de asesorías ligadas a un adecuado acompañamiento durante la implementación de las estrategias diseñadas. Esta iniciativa se sustenta además al observar la evidente insostenibilidad y difícil crecimiento de las mipymes en Colombia, las cuales en su mayoría, llegan a ser liquidadas y/o abandonadas al cumplir en promedio los dos años de existencia. Esto a pesar que nuestro país, ha logrado ubicarse en las primeras posiciones en materia de creación de empresas a nivel de América Latina durante los últimos años.',
 
