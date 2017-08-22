@@ -154,14 +154,18 @@
     </section>
     <!---->
     <h2 class="head-title text-center" id="clientes">{{ translate[lang]['txt_our_clients'] | uppercase }}</h2>
-    <section class="section-padding parallax bg-image-2 section wow fadeIn delay-08s" id="cta-2">
+    <section class="section-padding parallax bg-image-2 section wow fadeIn delay-08s" id="cta-2" style="padding: 10px 0">
         <div class="container">
             <div class="row">
 				<div id="myCarousel" class="carousel slide" data-ride="carousel">
 					  
 					<div class="carousel-inner">
 					    <div class="item text-center {{image=='01'?'active':''}}" ng-repeat="image in ['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20']">
-                            <img style="background-color: white; padding: 5px; height: 200px;" src="{{'img/logos_500x500/logos-'+image+'.png'}}" class="center-block" alt="{{image}}">
+                            <div class="center-block" style="background-color: #FAC900; transform: rotate(-7deg); width: 300px; height:200px; margin: 40px auto;">                                
+                                <div style="background-color: white; height: 200px; width: 300px; transform: rotate(7deg);" >                                    
+                                    <img style=" padding: 5px; height: 200px; " src="{{'img/logos_500x500/logos-'+image+'.png'}}" class="center-block" alt="{{image}}">
+                                </div>
+                            </div>
                         </div>
 					</div>
 

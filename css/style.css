@@ -513,3 +513,7 @@ ul.servicios{
 textarea.vertical{
     resize: vertical;
 }
+
+.carousel-control{
+    background:none !important;
+}
