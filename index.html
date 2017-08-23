@@ -213,32 +213,7 @@
                         <div class="portfolio-box design">
                             <img src="img/alianzas/alianzas-01.png" style="cursor: pointer;" class="img-responsive" onclick="window.open('http://www.afan.mx/', '_blanck')">
                         </div>
-                    </div>
-                    <!-- <div class="col-md-4 col-sm-6 padding-right-zero">
-                        <div class="portfolio-box design">
-                            <img src="img/port02.jpg" alt="" class="img-responsive">
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 padding-right-zero">
-                        <div class="portfolio-box design">
-                            <img src="img/port03.jpg" alt="" class="img-responsive">
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 padding-right-zero">
-                        <div class="portfolio-box design">
-                            <img src="img/port04.jpg" alt="" class="img-responsive">
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 padding-right-zero">
-                        <div class="portfolio-box design">
-                            <img src="img/port05.jpg" alt="" class="img-responsive">
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 padding-right-zero">
-                        <div class="portfolio-box design">
-                            <img src="img/port06.jpg" alt="" class="img-responsive">
-                        </div>
-                    </div> -->
+                    </div>                    
                 </div>
             </div>
         </div>
@@ -254,7 +229,7 @@
             </div>
             <ul class="nav nav-tabs nav-justified">
                 <li class="active">
-                    <a data-toggle="tab" href="#home">
+                    <a data-toggle="tab" href="#menu0">
                         <h3 class="cont-title" style="padding: 0 15px;">Contact Us</h3>
                     </a>
                 </li>
@@ -266,13 +241,11 @@
             </ul>
 
             <div class="tab-content">
-                <div id="home" class="tab-pane fade in active">
+                <div id="menu0" class="tab-pane fade in active">
                     <div class="row white">
                         <div class="col-md-8 col-sm-12">
                             <div class="section-title">
-                                <!-- <h2 class="head-title black">Contact Us</h2>
-                                <hr class="botm-line"> -->
-                                <!-- <p class="sec-para black">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</p> -->
+                                <p style="margin-top: 60px" class="sec-para black">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</p>
                             </div>
                         </div>
                         <div class="col-md-12 col-sm-12">
@@ -281,23 +254,31 @@
                                 <div id="sendmessage">Your message has been sent. Thank you!</div>
                                 <div id="errormessage"></div>
                                 <div class="contact-info">
-                                    <form action="" method="post" role="form" class="contactForm">
+                                    <form action="contactform/contact_me.php" method="post" role="form" class="contactForm">
+                                        <input type="hidden" name="origin" value="form1">
                                         <div class="form-group">
-                                            <input type="text" name="name" class="form-control" id="name" placeholder="{{translate[lang]['form_txt_name']}}" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                            <select required="" name="tipo" class="form-control">
+                                                <option value="">Tipo de mensaje</option>
+                                                <option value="Comentarios">Comentarios</option>
+                                                <option value="Cotizacion">Cotización</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <input required="" type="text" class="form-control" name="subject" id="subject" placeholder="{{translate[lang]['form_txt_subject']}}" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                                             <div class="validation"></div>
                                         </div>
                                         <div class="form-group">
-                                            <input type="email" class="form-control" name="email" id="email" placeholder="{{translate[lang]['form_txt_email']}}" data-rule="email" data-msg="Please enter a valid email" />
+                                            <input required="" type="text" name="name" class="form-control" id="name" placeholder="{{translate[lang]['form_txt_name']}}" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                            <div class="validation"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <input required="" type="email" class="form-control" name="email" id="email" placeholder="{{translate[lang]['form_txt_email']}}" data-rule="email" data-msg="Please enter a valid email" />
                                             <div class="validation"></div>
                                         </div>
                                         
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" name="subject" id="subject" placeholder="{{translate[lang]['form_txt_subject']}}" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                                            <div class="validation"></div>
-                                        </div>
                                         
                                         <div class="form-group">
-                                            <textarea class="form-control vertical" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="{{translate[lang]['form_txt_message']}}"></textarea>
+                                            <textarea required="" class="form-control vertical" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="{{translate[lang]['form_txt_message']}}"></textarea>
                                             <div class="validation"></div>
                                         </div>
                                         <button type="submit" class="btn btn-send">Send</button>
@@ -321,13 +302,11 @@
                         </div>
                     </div>
                 </div>
-                <div id="menu1" class="tab-pane fade">
+                <div id="menu1" class="tab-pane fade in">
                     <div class="row white">
                         <div class="col-md-8 col-sm-12">
                             <div class="section-title">
-                                <h2 class="head-title black">Contact Us</h2>
-                                <hr class="botm-line">
-                                <p class="sec-para black">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</p>
+                                <p style="margin-top: 60px" class="sec-para black">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</p>
                             </div>
                         </div>
                         <div class="col-md-12 col-sm-12">
@@ -336,23 +315,15 @@
                                 <div id="sendmessage">Your message has been sent. Thank you!</div>
                                 <div id="errormessage"></div>
                                 <div class="contact-info">
-                                    <form action="" method="post" role="form" class="contactForm">
+                                    <form action="contactform/contact_me.php" method="post" enctype='multipart/form-data' role="form" class="contactForm">
+                                        <input type="hidden" name="origin" value="form2">
                                         <div class="form-group">
-                                            <input type="text" name="name" class="form-control" id="name" placeholder="{{translate[lang]['form_txt_name']}}" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                            <label>Hoja de vida (.pdf)</label>
+                                            <input required="" type="file" name="hv" accept="application/pdf" class="form-control" id="name" placeholder="{{translate[lang]['form_txt_name']}}" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                                             <div class="validation"></div>
                                         </div>
                                         <div class="form-group">
-                                            <input type="email" class="form-control" name="email" id="email" placeholder="{{translate[lang]['form_txt_email']}}" data-rule="email" data-msg="Please enter a valid email" />
-                                            <div class="validation"></div>
-                                        </div>
-                                        
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" name="subject" id="subject" placeholder="{{translate[lang]['form_txt_subject']}}" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                                            <div class="validation"></div>
-                                        </div>
-                                        
-                                        <div class="form-group">
-                                            <textarea class="form-control vertical" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="{{translate[lang]['form_txt_message']}}"></textarea>
+                                            <textarea required="" class="form-control vertical" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="{{translate[lang]['form_txt_message']}}"></textarea>
                                             <div class="validation"></div>
                                         </div>
                                         <button type="submit" class="btn btn-send">Send</button>
@@ -364,13 +335,13 @@
                                 <h3 class="cont-title">Visit Us</h3>
                                 <div class="location-info">
                                     <p class="white"><span aria-hidden="true" class="fa fa-map-marker"></span>Bogotá, Colombia</p>
-                                    <p class="white"><span aria-hidden="true" class="fa fa-phone"></span>Phone: Phone: (57-1) 4935028</p>
+                                    <p class="white"><span aria-hidden="true" class="fa fa-phone"></span>Phone: (57-1) 4935028</p>
                                     <p class="white"><span aria-hidden="true" class="fa fa-envelope"></span>Email: <a href="" class="link-dec">hi@yourdomain.com</a></p>
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <div class="contact-icon-container hidden-md hidden-sm hidden-xs">
-                                    <span aria-hidden="true" class="fa fa-envelope-o"></span>
+                                <div class="contact-icon-container hidden-md hidden-sm hidden-xs" style="padding-top: 90px;">
+                                    <span aria-hidden="true" class="fa fa-briefcase"></span>
                                 </div>
                             </div>
                         </div>
@@ -379,7 +350,6 @@
             </div>
         </div>
 
-    
     </section>
     <!---->
     <!---->
