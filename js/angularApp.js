@@ -22,8 +22,10 @@ app.controller("appCtrl", function($scope) {
     		txt_mission_content: 'Nos mueve ser parte del fortalecimiento y crecimiento de las entidades públicas y privadas, y más aún del desarrollo de la fuerza emprendedora, lo cual se traduce en un fundamento clave para el progreso sostenible de la sociedad actual.',
     		txt_vision: 'Visión',
     		txt_vision_content: 'A 2020 seremos empresa líder a nivel nacional, reconocida por su excelente contribución al desarrollo, fortalecimiento y crecimiento de las organizaciones, fundamentada en un capital humano competente y brindando servicios con los más altos estándares de calidad. Así mismo, y además del mercado norteamericano, cubriremos importantes consultorías en el resto de América Latina.',
-    		txt_management_consulting: 'Consultoría de gestión',
+    		txt_management_consulting: 'Consultoría de gestión y organización',
+            txt_description_service_consultancy: 'La satisfacción del cliente y del grupo de colaboradores resulta ser la columna vertebral de las organizaciones sostenibles, responsables e innovadoras, en un entorno mundial caracterizado por los cambios constantes. Es allí donde el liderazgo, el correcto diseño de estrategias, la efectiva gestión de personal y una adecuada definición e implementación de procesos, juegan un rol crucial. Lo anterior nos lleva a manifestarle nuestro fiel y sincero interés en ser parte activa del crecimiento de su organización a través de las siguientes formas: ',
     		txt_economic_and_business_consulting:'Consultoría económica y empresarial',
+            txt_description_service_business: 'El impacto positivo o negativo que puedan tener las organizaciones sobre la sociedad, es la razón realmente clave de su existencia. No obstante y con frecuencia, tiende a debilitarse el enfoque, entre otras cosas, por falta de análisis y mediciones puntuales que ayuden a tomar mejores decisiones. Por ello es muy importante para nosotros brindarle nuestro apoyo con el fin definir y evaluar proyectos dignos de ser desarrollados, desde un ejercicio profesional enmarcado en las ciencias económicas y empresariales, aplicado a través de nuestro talento humano que permanece creciendo en términos académicos y laborales:',
     		txt_process_improvement: 'Mejora de procesos',
     		txt_human_management: 'Gestión humana',
     		txt_management_systems: 'Sistemas de gestión',
@@ -67,7 +69,9 @@ app.controller("appCtrl", function($scope) {
     			'Despliegue estratégico: Cuadro de Mando Integral (CMI).',
     			'Diseño de la planeación estratégica.',
     			'Elaboración de proyectos de iniciativa pública y privada.',
+                'Estudios sectoriales',
     			'Estudio de oferta y demanda para el ajuste de tarifas para el sector transporte y servicios públicos.'
+                
             ],
 
             form_txt_email: 'Email personal',
@@ -93,8 +97,10 @@ app.controller("appCtrl", function($scope) {
     		txt_mission_content: 'It moves us to be part of the strengthening and growth of public and private entities, and even more of the development of the entrepreneurial force, which translates into a key foundation for the sustainable progress of today\'s society.',
     		txt_vision: 'Vision',
     		txt_vision_content: 'By 2020 we will be a leading company at the national level, recognized for its excellent contribution to the development, strengthening and growth of organizations, based on competent human capital and providing services with the highest quality standards. Likewise, besides the North American market, we will cover important consultancies in the rest of Latin America.',
-    		txt_management_consulting: 'Management consulting',
+    		txt_management_consulting: 'management and organization consultancy',
+            txt_description_service_consultancy: 'The satisfaction of the client and the group of collaborators turns out to be the backbone of sustainable, responsible and innovative organizations in a global environment characterized by constant changes. This is where leadership, correct strategy design, effective personnel management, and proper process definition and implementation play a crucial role. This leads us to express our sincere and sincere interest in being an active part of the growth of your organization through the following ways:',
     		txt_economic_and_business_consulting:'Economic and business consulting',
+            txt_description_service_business: 'The positive or negative impact that organizations may have on society is the really key reason for their existence. However, there is a tendency to weaken the focus, among other things, by lack of analysis and timely measurements to help make better decisions. That is why it is very important for us to offer our support in order to define and evaluate projects worthy of being developed, from a professional exercise framed in the economic and business sciences, applied through our human talent that continues to grow in academic and work terms:',
     		txt_process_improvement: 'Process improvement',
     		txt_human_management: 'Human management',
     		txt_management_systems: 'Management systems',
@@ -137,7 +143,9 @@ app.controller("appCtrl", function($scope) {
     			'Strategic Deployment: Integral Command Chart (CMI).',
     			'Design of strategic planning.',
     			'Elaboration of projects of public and private initiative.',
+                'Sectorial studies',
     			'Supply and demand study for the adjustment of tariffs for the transport and public services sector.'
+                
             ],
 
             form_txt_email: 'Your Email',
