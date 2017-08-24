@@ -11,10 +11,15 @@ app.controller("appCtrl", function($scope) {
     		txt_about: 'Quienes somos',
     		txt_services: 'Servicios',
     		txt_clients: 'Clientes',
-            txt_our_clients: 'Nuestros clientes',
+            txt_our_clients: 'Algunos de Nuestros clientes',
     		txt_contact: 'Contacto',
             txt_alliances: 'Alianzas',
             txt_strategic_alliances: 'Alianzas estratégicas',
+            txt_work_us: 'Trabaja con nosotros',
+            txt_email_us: 'Escríbenos',
+            txt_visit_us: 'Visítanos',
+            txt_curriculum: 'Hoja de vida',
+            txt_alliances_msg: 'Gestionamos las mejores relaciones para tener una atención al cliente más efectiva, buscamos que nuestros servicios lleguen a otros lugares importantes.',
 
     		txt_about_content: 'Know How Asesores nace de la necesidad de fortalecer el desarrollo de organizaciones privadas y públicas  a través de asesorías ligadas a un adecuado acompañamiento durante la implementación de las estrategias diseñadas. Esta iniciativa se sustenta además al observar la evidente insostenibilidad y difícil crecimiento de las mipymes en Colombia, las cuales en su mayoría, llegan a ser liquidadas y/o abandonadas al cumplir en promedio los dos años de existencia. Esto a pesar que nuestro país, ha logrado ubicarse en las primeras posiciones en materia de creación de empresas a nivel de América Latina durante los últimos años.',
 
@@ -77,8 +82,14 @@ app.controller("appCtrl", function($scope) {
             form_txt_email: 'Email personal',
             form_txt_name: 'Nombre completo',
             form_txt_subject: 'Asunto',
+            form_txt_phone: 'Celular',
             form_txt_message: 'Mensaje',
-            form_text_send: 'Enviar'
+            form_txt_comments: 'Comentarios',
+            form_txt_quotations:'Cotizaciones',
+            form_txt_type: 'Tipo de mensaje',
+            form_txt_send: 'Enviar',
+            txt_send_msg: 'Tu mensaje ha sido enviado. ¡Gracias!',
+            txt_erro_msg: 'Existe un error en el envio del formulario, por favor intenta mas tarde.'
     	},
 
     	en: {
@@ -86,10 +97,15 @@ app.controller("appCtrl", function($scope) {
     		txt_about: 'About us',
     		txt_services: 'Services',
     		txt_clients: 'Customers',
-            txt_our_clients: 'Our clients',
-    		txt_contact: 'Contact',
+            txt_our_clients: 'Some our customers',
+    		txt_contact: 'Contact us',
             txt_alliances: 'Alliances',
             txt_strategic_alliances: 'Strategic Alliances',
+            txt_work_us: 'Work Us',
+            txt_email_us: 'Email Us',
+            txt_visit_us: 'Visit Us',
+            txt_curriculum: 'Curriculum',
+            txt_alliances_msg: 'We manage the best relationships to have a more effective customer service, we seek that our services reach other important places.',
 
     		txt_about_content: 'Know How Advisors arises from the need to strengthen the development of private and public organizations through advisory services linked to an adequate accompaniment during the implementation of the strategies designed. This initiative is also sustained by observing the evident unsustainability and difficult growth of microenterprises in Colombia, which are mostly liquidated and / or abandoned on average in the two years of existence. This in spite of our country, has managed to position itself in the top positions in business creation in Latin America in recent years.',
 
@@ -151,9 +167,14 @@ app.controller("appCtrl", function($scope) {
             form_txt_email: 'Your Email',
             form_txt_name: 'Your Name',
             form_txt_subject: 'Subject',
+            form_txt_phone: 'Cell phone',
             form_txt_message: 'Message',
-            form_text_send: 'Send'
-
+            form_txt_comments: 'Comments',
+            form_txt_quotations:'Quotations',
+            form_txt_type: 'Type of email',
+            form_txt_send: 'Send',
+            txt_send_msg: 'Your message has been sent. Thank you!',
+            txt_erro_msg: 'There is an error submitting the form, please try again later.'
 
     	}
     };

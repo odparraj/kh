@@ -33,14 +33,14 @@ h1, h2, h3, h4, h5, h6
 }
 .main-header
 {
-	background: url(../img/test.jpeg) no-repeat;
+	background: url(../img/home.jpg) no-repeat;
 	background-size: cover;
     background-position: 50% 50%; 
-	min-height: 610px;
+	min-height: 540px;
 }
 .bg-color
 {
-	background-color: RGBA(0, 0, 0, 0.41);
+	background-color: RGBA(0, 0, 0, 0.61);
 }
 
 .nav > li > a {
@@ -232,7 +232,7 @@ h3.txt-tl {
     background-position: center center;
 }
 .bg-image-2 {
-    background: url('../img/cta-banner.jpg') no-repeat center fixed;
+    background: url('../img/cta-banner_2.jpg') no-repeat center fixed;
     -webkit-background-size: 100% auto;
     -moz-background-size: 100% auto;
     -o-background-size: 100% auto;
@@ -302,6 +302,30 @@ h3.txt-tl {
 
 #sendmessage.show, #errormessage.show, .show {
 	display:block;
+}
+
+#sendmessage2 {
+    color: green;
+    border:1px solid green;
+    display:none;
+    text-align:center;
+    padding:15px;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+#errormessage2 {
+    color: red;
+    display:none;
+    border:1px solid red;
+    text-align:center;
+    padding:15px;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+#sendmessage2.show, #errormessage.show, .show {
+    display:block;
 }
 
 .black
@@ -388,6 +412,38 @@ a, a:hover
 .link-dec, .link-dec:hover{
     color: #000;
 }
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 0;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: rgba(255, 255, 255, 0.62);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+    color: white;
+    text-align: left;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
+    color: #FFD34E;
+}
 /****/
 @media (min-width: 451px) and (max-width: 900px){
     .section-title{
@@ -411,6 +467,16 @@ a, a:hover
         background-color: rgba(255, 255, 255, 0.32);
         color: #FFD34E;
     }
+
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+        color: white;
+        text-align: center;
+    }
+
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
+        color: #FFD34E;
+    }
+
     .top-title{
         font-size: 15px;
     }
@@ -467,30 +533,6 @@ li.servicios {
 img.logo.img-responsive {
     margin: 0 auto;
 }
-
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1000;
-    display: none;
-    float: left;
-    min-width: 0;
-    padding: 5px 0;
-    margin: 2px 0 0;
-    font-size: 14px;
-    text-align: left;
-    list-style: none;
-    background-color: #fff;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
-    border: 1px solid #ccc;
-    border: 1px solid rgba(0,0,0,.15);
-    border-radius: 4px;
-    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
-    box-shadow: 0 6px 12px rgba(0,0,0,.175);
-}
-
 
 span.servicios{
     font-size: 12px;

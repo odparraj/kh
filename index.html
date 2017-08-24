@@ -25,13 +25,10 @@
                             <button id="button-bar" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynavbar" aria-expanded="false" aria-controls="navbar">
                                 <span class="fa fa-bars"></span>
                             </button>
-                            <a href="index.html" class="navbar-brand"><img src="img/logo-peque.png" alt="" class="logo" class="img-responsive"></a>
+                            <a href="#" class="navbar-brand"><img src="img/logo-peque.png" alt="" class="logo" class="img-responsive"></a>
                         </div>
                         <div class="collapse navbar-collapse navbar-right" id="mynavbar">
                             <ul class="nav navbar-nav">
-                                <!-- <li class="active">
-                                    <a class="nav-clickable" href="#header">{{ translate[lang]['txt_home'] }}</a>
-                                </li> -->
                                 <li>
                                     <a class="nav-clickable" href="#quienes">{{ translate[lang]['txt_about'] }}</a>
                                 </li>
@@ -50,7 +47,7 @@
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{lang}} <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="nav-clickable" ng-click="lang=='es'?lang='en':lang='es'">{{ lang == 'es' ? 'En' : 'Es' }}</a></li>
+                                        <li class="active"><a class="nav-clickable" ng-click="lang=='es'?lang='en':lang='es'">{{ lang == 'es' ? 'En' : 'Es' }}</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -178,31 +175,33 @@
     <!---->
     
     <h2 style="padding-top: 75px;" class="head-title text-center wow fadeInUp delay-05s animated" id="clientes">{{ translate[lang]['txt_our_clients'] | uppercase }}</h2>
-    <section class="section-padding parallax bg-image-2 section wow fadeIn delay-08s" id="cta-2" style="padding: 10px 0">
-        <div class="container">
-            <div class="row">
-				<div id="myCarousel" class="carousel slide" data-ride="carousel">
-					  
-					<div class="carousel-inner">
-					    <div class="item text-center {{image=='01'?'active':''}}" ng-repeat="image in ['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19']">
-                            <div class="center-block" style="background-color: #FAC900; transform: rotate(-7deg); width: 300px; height:200px; margin: 40px auto;">                                
-                                <div style="background-color: white; height: 200px; width: 300px; transform: rotate(7deg);" >                                    
-                                    <img style=" padding: 5px; height: 200px; " src="{{'img/logos/logos-'+image+'.png'}}" class="center-block" alt="{{image}}">
+    <section class="section-padding parallax bg-image-2 section wow fadeIn delay-08s" id="cta-2" style="padding: 0">
+        <div class="bg-color">            
+            <div class="container">
+                <div class="row">
+    				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    					  
+    					<div class="carousel-inner">
+    					    <div class="item text-center {{image=='01'?'active':''}}" ng-repeat="image in ['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19']">
+                                <div class="center-block" style="background-color: #FAC900; transform: rotate(-7deg); width: 300px; height:200px; margin: 40px auto;">                                
+                                    <div style="background-color: white; height: 200px; width: 300px; transform: rotate(7deg);" >                                    
+                                        <img style=" padding: 5px; height: 200px; " src="{{'img/logos/logos-'+image+'.png'}}" class="center-block" alt="{{image}}">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-					</div>
+    					</div>
 
-					  <!-- Left and right controls -->
-					<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-					    <span class="glyphicon glyphicon-chevron-left"></span>
-					    <span class="sr-only">Previous</span>
-					</a>
-					<a class="right carousel-control" href="#myCarousel" data-slide="next">
-					    <span class="glyphicon glyphicon-chevron-right"></span>
-					    <span class="sr-only">Next</span>
-					</a>
-				</div>
+    					  <!-- Left and right controls -->
+    					<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    					    <span class="glyphicon glyphicon-chevron-left"></span>
+    					    <span class="sr-only">Previous</span>
+    					</a>
+    					<a class="right carousel-control" href="#myCarousel" data-slide="next">
+    					    <span class="glyphicon glyphicon-chevron-right"></span>
+    					    <span class="sr-only">Next</span>
+    					</a>
+    				</div>
+                </div>
             </div>
         </div>
     </section>
@@ -215,7 +214,7 @@
                     <div class="section-title">
                         <h2 class="head-title">{{translate[lang]['txt_strategic_alliances'] | uppercase}}</h2>
                         <hr class="botm-line">
-                        <p class="sec-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</p>
+                        <p class="sec-para">{{translate[lang]['txt_alliances_msg']}}</p>
                     </div>
                 </div>
                 <div class="col-md-9 col-sm-12">
@@ -233,19 +232,18 @@
     <section class="section-padding wow fadeInUp delay-05s" id="contact">
         <div class="container">
             <div class="section-title text-center">
-                <h2 class="head-title black">Contact Us</h2>
-                <hr class="botm-line">
-                
+                <h2 class="head-title black">{{translate[lang]['txt_contact'] | uppercase}}</h2>
+                <!-- <hr class="botm-line"> -->                
             </div>
             <ul class="nav nav-tabs nav-justified">
                 <li class="active">
                     <a data-toggle="tab" href="#menu0">
-                        <h3 class="cont-title" style="padding: 0 15px;">Contact Us</h3>
+                        <h3 class="cont-title" style="padding: 0 15px;">{{ translate[lang]['txt_email_us'] }}</h3>
                     </a>
                 </li>
                 <li>
                     <a data-toggle="tab" href="#menu1">
-                        <h3 class="cont-title" style="padding: 0 15px;">Contact Us</h3>
+                        <h3 class="cont-title" style="padding: 0 15px;">{{ translate[lang]['txt_work_us'] }}</h3>
                     </a>
                 </li>
             </ul>
@@ -255,53 +253,57 @@
                     <div class="row white">
                         <div class="col-md-8 col-sm-12">
                             <div class="section-title">
-                                <p style="margin-top: 60px" class="sec-para black">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</p>
+                                <p style="margin-top: 40px" class="sec-para black"></p>
                             </div>
                         </div>
                         <div class="col-md-12 col-sm-12">
                             <div class="col-md-4 col-sm-6" style="padding-left:0px;">
-                                <h3 class="cont-title">Email Us</h3>
-                                <div id="sendmessage">Your message has been sent. Thank you!</div>
-                                <div id="errormessage"></div>
+                                <h3 class="cont-title">{{translate[lang]['txt_email_us']}}</h3>
+                                <div id="sendmessage">{{translate[lang]['txt_send_msg']}}</div>
+                                <div id="errormessage">{{translate[lang]['txt_error_msg']}}</div>
                                 <div class="contact-info">
-                                    <form action="contactform/contact_me.php" method="post" role="form" class="contactForm">
+                                    <form id="form_email_us" action="contactform/contact_me.php" method="post" role="form" class="contactForm">
                                         <input type="hidden" name="origin" value="form1">
                                         <div class="form-group">
                                             <select required="" name="tipo" class="form-control">
-                                                <option value="">Tipo de mensaje</option>
-                                                <option value="Comentarios">Comentarios</option>
-                                                <option value="Cotizacion">Cotización</option>
+                                                <option value="">{{translate[lang]['form_txt_type']}}</option>
+                                                <option value="Comentarios">{{translate[lang]['form_txt_comments']}}</option>
+                                                <option value="Cotizacion">{{translate[lang]['form_txt_quotations']}}</option>
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <input required="" type="text" class="form-control" name="subject" id="subject" placeholder="{{translate[lang]['form_txt_subject']}}" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                            <input required="" type="text" class="form-control" name="subject"  placeholder="{{translate[lang]['form_txt_subject']}}" />
                                             <div class="validation"></div>
                                         </div>
                                         <div class="form-group">
-                                            <input required="" type="text" name="name" class="form-control" id="name" placeholder="{{translate[lang]['form_txt_name']}}" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                            <input required="" type="text" name="name" class="form-control" placeholder="{{translate[lang]['form_txt_name']}}" />
                                             <div class="validation"></div>
                                         </div>
                                         <div class="form-group">
-                                            <input required="" type="email" class="form-control" name="email" id="email" placeholder="{{translate[lang]['form_txt_email']}}" data-rule="email" data-msg="Please enter a valid email" />
+                                            <input required="" type="email" class="form-control" name="email" placeholder="{{translate[lang]['form_txt_email']}}" />
+                                            <div class="validation"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <input required="" type="number" class="form-control" name="phone" placeholder="{{translate[lang]['form_txt_phone']}}" />
                                             <div class="validation"></div>
                                         </div>
                                         
                                         
                                         <div class="form-group">
-                                            <textarea required="" class="form-control vertical" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="{{translate[lang]['form_txt_message']}}"></textarea>
+                                            <textarea required="" class="form-control vertical" name="message" rows="5" placeholder="{{translate[lang]['form_txt_message']}}"></textarea>
                                             <div class="validation"></div>
                                         </div>
-                                        <button type="submit" class="btn btn-send">Send</button>
+                                        <button type="submit" class="btn btn-send">{{translate[lang]['form_txt_send']}}</button>
                                     </form>
                                 </div>
                                 
                             </div>
                             <div class="col-md-4 col-sm-6">
-                                <h3 class="cont-title">Visit Us</h3>
+                                <h3 class="cont-title">{{translate[lang]['txt_visit_us']}}</h3>
                                 <div class="location-info">
-                                    <p class="white"><span aria-hidden="true" class="fa fa-map-marker"></span>Bogotá, Colombia</p>
-                                    <p class="white"><span aria-hidden="true" class="fa fa-phone"></span>Phone: Phone: (57-1) 4935028</p>
-                                    <p class="white"><span aria-hidden="true" class="fa fa-envelope"></span>Email: <a href="" class="link-dec">hi@yourdomain.com</a></p>
+                                    <p class="white"><span aria-hidden="true" class="fa fa-map-marker"></span>Bogotá, Colombia  |  Florida, USA</p>
+                                    <p class="white"><span aria-hidden="true" class="fa fa-phone"></span>{{translate[lang]['form_txt_phone']}}:  (+57) 3213929988</p>
+                                    <p class="white"><span aria-hidden="true" class="fa fa-envelope"></span>Email: <a href="mailto:info@khconsultoria.com" class="link-dec">info@khconsultoria.com</a></p>
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -316,37 +318,37 @@
                     <div class="row white">
                         <div class="col-md-8 col-sm-12">
                             <div class="section-title">
-                                <p style="margin-top: 60px" class="sec-para black">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</p>
+                                <p style="margin-top: 40px" class="sec-para black"></p>
                             </div>
                         </div>
                         <div class="col-md-12 col-sm-12">
                             <div class="col-md-4 col-sm-6" style="padding-left:0px;">
-                                <h3 class="cont-title">Email Us</h3>
-                                <div id="sendmessage">Your message has been sent. Thank you!</div>
-                                <div id="errormessage"></div>
+                                <h3 class="cont-title">{{translate[lang]['txt_work_us']}}</h3>
+                                <div id="sendmessage2">{{translate[lang]['txt_send_msg']}}</div>
+                                <div id="errormessage2">{{translate[lang]['txt_error_msg']}}</div>
                                 <div class="contact-info">
-                                    <form action="contactform/contact_me.php" method="post" enctype='multipart/form-data' role="form" class="contactForm">
+                                    <form id="form_work_us" action="contactform/contact_me.php" method="post" enctype='multipart/form-data' role="form" class="contactForm">
                                         <input type="hidden" name="origin" value="form2">
                                         <div class="form-group">
-                                            <label>Hoja de vida (.pdf)</label>
-                                            <input required="" type="file" name="hv" accept="application/pdf" class="form-control" id="name" placeholder="{{translate[lang]['form_txt_name']}}" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                            <label>{{translate[lang]['txt_curriculum']}} (.pdf)</label>
+                                            <input id="file_form" required="" type="file" name="hv" accept="application/pdf" class="form-control" placeholder="{{translate[lang]['form_txt_name']}}" />
                                             <div class="validation"></div>
                                         </div>
                                         <div class="form-group">
-                                            <textarea required="" class="form-control vertical" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="{{translate[lang]['form_txt_message']}}"></textarea>
+                                            <textarea id="form_msg" required="" class="form-control vertical" name="message" rows="5" placeholder="{{translate[lang]['form_txt_message']}}"></textarea>
                                             <div class="validation"></div>
                                         </div>
-                                        <button type="submit" class="btn btn-send">Send</button>
+                                        <button type="submit" class="btn btn-send">{{translate[lang]['form_txt_send']}}</button>
                                     </form>
                                 </div>
                                 
                             </div>
                             <div class="col-md-4 col-sm-6">
-                                <h3 class="cont-title">Visit Us</h3>
+                                <h3 class="cont-title">{{translate[lang]['txt_visit_us']}}</h3>
                                 <div class="location-info">
-                                    <p class="white"><span aria-hidden="true" class="fa fa-map-marker"></span>Bogotá, Colombia</p>
-                                    <p class="white"><span aria-hidden="true" class="fa fa-phone"></span>Phone: (57-1) 4935028</p>
-                                    <p class="white"><span aria-hidden="true" class="fa fa-envelope"></span>Email: <a href="" class="link-dec">hi@yourdomain.com</a></p>
+                                    <p class="white"><span aria-hidden="true" class="fa fa-map-marker"></span>Bogotá, Colombia  |  Florida, USA</p>
+                                    <p class="white"><span aria-hidden="true" class="fa fa-phone"></span>{{translate[lang]['form_txt_phone']}}:  (+57) 3213929988</p>
+                                    <p class="white"><span aria-hidden="true" class="fa fa-envelope"></span>Email: <a href="mailto:asistente@khconsultoria.com" class="link-dec">asistente@khconsultoria.com</a></p>
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -366,11 +368,13 @@
     <footer class="" id="footer">
         <div class="container">
             <div class="row">
-                <div class="col-sm-7 footer-copyright">
+                <div class="col-xs-7 footer-copyright" style="margin-top: 30px">
                     © Know How Asesores <a>{{ date | date:'yyyy' }}</a>
-                    </div>
                 </div>
-
+                
+                <div class="col-xs-5">
+                    <img src="img/teletrabajo.png" style="width: 80px; margin: 0 auto; float: right;">
+                </div>
             </div>
         </div>
     </footer>
